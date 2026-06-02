@@ -7,21 +7,11 @@
     <title>SelfieRing</title>
     <link rel="icon" type="image/png" href="img/icon/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Montserrat:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -84,7 +74,7 @@
             <div class="change-img">
               <div class="front-side-img">
                 <a href="#" data-scroll="#photo"
-                  ><img src="./img/04.png" alt="img"
+                  ><img fetchpriority="high" src="./img/04.png" alt="img"
                 /></a>
               </div>
             </div>
@@ -93,7 +83,7 @@
             <div class="change-img">
               <div class="front-side-img">
                 <a href="#" data-scroll="#video"
-                  ><img src="./img/05.png" alt="img"
+                  ><img fetchpriority="high" src="./img/05.png" alt="img"
                 /></a>
               </div>
             </div>
@@ -123,7 +113,7 @@
                   <div class="card left-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/01.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/01.webp" alt="#" />
                   </div>
                 </div>
                      </div>
@@ -131,7 +121,7 @@
                     <div class="card right-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/02.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/02.webp" alt="#" />
                   </div>
                 </div>
                     </div>
@@ -139,7 +129,7 @@
               <div class="card left-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/03.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/03.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -147,7 +137,7 @@
               <div class="card right-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/04.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/04.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -155,7 +145,7 @@
               <div class="card left-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/05.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/05.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -163,7 +153,7 @@
               <div class="card right-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/06.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/06.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -171,7 +161,7 @@
               <div class="card left-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/07.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/07.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -179,7 +169,7 @@
               <div class="card right-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/08.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/08.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -187,7 +177,7 @@
               <div class="card right-card">
                 <div class="card-bg">
                   <div class="card-img">
-                    <img src="./img/fotoblock/09.webp" alt="#" />
+                    <img loading="lazy" decoding="async" src="./img/fotoblock/09.webp" alt="#" />
                   </div>
                 </div>
               </div>
@@ -209,19 +199,21 @@
           loop
           muted
           controls
+          playsinline
+          preload="metadata"
         ></video>
         <ul>
           <li onclick="videoslider('./img/video/video1.mp4')">
-            <video src="./img/video/video1.mp4"></video>
+            <video src="./img/video/video1.mp4" muted preload="none"></video>
           </li>
           <li onclick="videoslider('./img/video/video2.mp4')">
-            <video src="./img/video/video2.mp4"></video>
+            <video src="./img/video/video2.mp4" muted preload="none"></video>
           </li>
           <li onclick="videoslider('./img/video/video3.mp4')">
-            <video src="./img/video/video3.mp4"></video>
+            <video src="./img/video/video3.mp4" muted preload="none"></video>
           </li>
           <li onclick="videoslider('./img/video/video4.mp4')">
-            <video src="./img/video/video4.mp4"></video>
+            <video src="./img/video/video4.mp4" muted preload="none"></video>
           </li>
         </ul>
       </div>
@@ -237,55 +229,55 @@
     <div class="slider" id="albume">
       <div class="slide-track">
         <div class="slide">
-          <img src="./img/album/01.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/01.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/02.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/02.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/03.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/03.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/04.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/04.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/05.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/05.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/06.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/06.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/07.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/07.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/08.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/08.webp" alt="#" />
         </div>
 
         <!-- Same 9 slides (doubled) -->
 
         <div class="slide">
-          <img src="./img/album/09.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/09.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/10.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/10.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/11.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/11.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/12.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/12.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/13.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/13.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/14.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/14.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/15.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/15.webp" alt="#" />
         </div>
         <div class="slide">
-          <img src="./img/album/16.webp" alt="#" />
+          <img loading="lazy" decoding="async" src="./img/album/16.webp" alt="#" />
         </div>
       </div>
     </div>
@@ -302,7 +294,7 @@
       <div class="container">
         <div class="team__inner">
           <div class="team__item">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/1.webp"
@@ -320,7 +312,7 @@
             </div>
           </div>
           <div class="team__item">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/2.webp"
@@ -337,7 +329,7 @@
             </div>
           </div>
           <div class="team__item">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/3.webp"
@@ -359,7 +351,7 @@
             </div>
           </div>
           <div class="team__item">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/4.webp"
@@ -379,7 +371,7 @@
             </div>
           </div>
           <div class="team__item1">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/5.webp"
@@ -394,7 +386,7 @@
             </div>
           </div>
           <div class="team__item2">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/6.webp"
@@ -412,7 +404,7 @@
             </div>
           </div>
           <div class="team__item3">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/7.webp"
@@ -429,7 +421,7 @@
             </div>
           </div>
           <div class="team__item4">
-            <img
+            <img loading="lazy" decoding="async"
               style="border-radius: 15px"
               class="team__photo"
               src="./img/blog/8.webp"
@@ -452,7 +444,7 @@
     <section id="lab" class="">
       <div class="container">
       <div class="sectionheader">
-        <h1><img src="./img/fblock/hex.webp" alt="#" /></h1>
+        <h1><img loading="lazy" decoding="async" src="./img/fblock/hex.webp" alt="#" /></h1>
       </div>
       <article>
         <div class="lab_item">
@@ -522,7 +514,7 @@
       <div class="contact-section" id="contacte">
         <div class="contact-section h1">
           <h1>
-            <img style="width: 200px" src="./img/fblock/cu.webp" alt="img" />
+            <img loading="lazy" decoding="async" style="width: 200px" src="./img/fblock/cu.webp" alt="img" />
           </h1>
         </div>
         <form class="contact-form" id="contactForm" novalidate>
@@ -619,10 +611,6 @@
       integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-      type="text/javascript"
     ></script>
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
