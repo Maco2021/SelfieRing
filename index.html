@@ -563,14 +563,16 @@
             required
           ></textarea>
           <div id="cf-status" class="cf-status" aria-live="polite"></div>
-          <button
+          <input
             type="submit"
             value=""
             id="cf-submit"
             class="contact-form-btn"
-            aria-label="Send message"
-            data-testid="contact-submit-btn"
-          ></button>
+            style="
+              transition: opacity 0.2s linear;
+              background: url(./img/fblock/send.webp) no-repeat center;
+            "
+          />
           <div>
             <div class="copyright">
               <div class="container">
