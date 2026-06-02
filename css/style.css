@@ -1225,7 +1225,41 @@ textarea.contact-form-text {
   border: none;
   background: none;
   opacity: 0.75;
+  position: relative;
   transition: opacity 0.2s linear;
+}
+.contact-form-btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: url(./img/fblock/send.webp) no-repeat center;
+  background-size: contain;
+}
+.contact-form-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 0;
+  background: #000;
+  transition: 0.4s;
+  box-shadow: 0 0 10px 4px #dee3e8;
+}
+.contact-form-btn:hover::after {
+  transform: scale(1.3);
+  opacity: 0;
+}
+.contact-form-btn:hover {
+  opacity: 1;
 }
 .contact-form-btn:focus {
   outline: none;
